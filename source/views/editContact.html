@@ -1,0 +1,114 @@
+<div layout="column">
+	<md-content>
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<div layout="column" flex>
+					<div layout="row" layout-align="center center">
+						<md-button class="md-icon-button" aria-label="More" ng-click="goBack()">
+							<md-tooltip md-direction="left">
+								back
+							</md-tooltip>
+							<i class="material-icons">arrow_back</i>
+						</md-button>
+						<h3 flex>EDIT CONTACT</h3>
+						<md-button class="md-icon-button" aria-label="Account" ng-click="$mdOpenMenu()">
+							<i md-menu-origin class="material-icons">account_circle</i>
+						</md-button>
+					</div>
+				</div>
+			</div>
+		</md-toolbar>
+	</md-content>
+	<div layout="row" layout-align="center center">
+		<div flex-gt-md="70" flex>
+			<form novalidate name="userForm" ng-submit="updateContact(currentContact)">
+				<md-content layout-padding class="autoScroll">
+					<div layout="row" layout-align="end start" add-to-fav>
+						<md-button class="md-primary">
+							<i class="material-icons">{{currentContact.isFav?"star":"star_border"}}</i>
+						</md-button>
+						<input type="checkbox" ng-model="currentContact.isFav" hidden />
+					</div>
+					<div layout="row" layout-padding layout-align="center start">
+						<md-radio-group ng-model="currentContact.avatar" layout="row" layout-align="center start">
+							<md-radio-button ng-repeat="avatar in avatarData" ng-value="avatar.value" aria-label="{{avatar.title}}" flex="25">
+								<img ng-src="{{avatar.value}}" alt="{{avatar.title}}" class="avatar" />
+							</md-radio-button>
+						</md-radio-group>
+					</div>
+					<div layout="row" layout-padding layout-align-sm="start start" layout-align-gt-sm="center start">
+						<i class="material-icons ca-account-icons">account_box</i>
+						<div layout="column" flex="70">
+							<md-input-container flex>
+								<input ng-model="currentContact.fname" name="fname" type="text" placeholder="First Name(required)" required>
+								<div ng-messages="userForm.fname.$error" ng-show="userForm.fname.$dirty">
+									<div ng-message="required">First Name is required.</div>
+								</div>
+							</md-input-container>
+							<md-input-container flex>
+								<input ng-model="currentContact.lname" name="lname" type="text" placeholder="Last Name (required)" required>
+								<div ng-messages="userForm.lname.$error" ng-show="userForm.lname.$dirty">
+									<div ng-message="required">Last Name is required.</div>
+								</div>
+							</md-input-container>
+						</div>
+					</div>
+					<div layout="row" layout-padding layout-align-sm="start start" layout-align-gt-sm="center start">
+						<i class="material-icons ca-account-icons">contact_phone</i>
+						<div layout="column" flex="70">
+							<md-input-container flex>
+								<!-- Use floating label instead of placeholder -->
+								<input ng-model="currentContact.phone1" name="phone1" type="number" placeholder="Primary Phone (required)" required>
+								<div ng-messages="userForm.phone1.$error" ng-show="userForm.phone1.$dirty">
+									<div ng-message="required">Primary Phone Number is required.</div>
+								</div>
+							</md-input-container>
+							<md-input-container class="md-icon-float" flex>
+								<!-- Use floating label instead of placeholder -->
+								<label>Secondary Phone</label>
+								<input ng-model="currentContact.phone2" name="phone2" type="number">
+							</md-input-container>
+						</div>
+					</div>
+					<div layout="row" layout-padding layout-align-sm="start start" layout-align-gt-sm="center start">
+						<i class="material-icons ca-account-icons">email</i>
+						<div layout="column" flex="70">
+							<md-input-container class="md-icon-float" flex>
+								<!-- Use floating label instead of placeholder -->
+								<label>Email</label>
+								<input ng-model="currentContact.email" name="email" type="email">
+								<div ng-messages="userForm.email.$error" ng-show="userForm.email.$dirty">
+									<div ng-message="email">Email Address is invalid.</div>
+								</div>
+							</md-input-container>
+						</div>
+					</div>
+					<div layout="row" layout-padding layout-align-sm="start start" layout-align-gt-sm="center start">
+						<i class="material-icons ca-account-icons">cake</i>
+						<div layout="column" flex="70">
+							<md-input-container class="md-icon-float" flex>
+								<!-- Use floating label instead of placeholder -->
+								<label>Birthday</label>
+								<input type="date" ng-model="currentContact.bday" name="birthday">
+							</md-input-container>
+						</div>
+					</div>
+					<div layout="row" layout-padding layout-align-sm="start start" layout-align-gt-sm="center start">
+						<i class="material-icons ca-account-icons">web</i>
+						<div layout="column" flex="70">
+							<md-input-container class="md-icon-float" flex>
+								<!-- Use floating label instead of placeholder -->
+								<label>Website</label>
+								<input ng-model="currentContact.website" name="website" type="text">
+							</md-input-container>
+						</div>
+					</div>
+					<div layout="row" layout-padding layout-align="center center">
+						<md-button type="submit" ng-disabled="userForm.$invalid" class="md-raised md-primary md-hue-2" flex="30">Save Contact</md-button>
+						<md-button class="md-raised md-warn" flex="30" ng-click="goBack()">Cancel</md-button>
+					</div>
+				</md-content>
+			</form>
+		</div>
+	</div>
+</div>

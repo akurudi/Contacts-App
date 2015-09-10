@@ -153,6 +153,6 @@ To load the distribution project over `localhost:5000` run:
 ```shell
 grunt connect:prod
 ```
-###### Making updates/changes to projects
+###### Making updates/changes to the project:
 
-If you make changes to the project, make sure to update the file references in the gruntfile accordingly.
+If you make changes to the project, make sure to update file references in `gruntfile.js` accordingly.

@@ -1,0 +1,74 @@
+<div layout="column">
+	<md-content>
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<div layout="column" flex>
+					<div layout="row" layout-align="center center">
+						<md-button class="md-icon-button" aria-label="More" ng-click="goBack()">
+							<md-tooltip md-direction="left">
+								back
+							</md-tooltip>
+							<i class="material-icons">arrow_back</i>
+						</md-button>
+						<h3 flex>View CONTACT</h3>
+						<md-button class="md-icon-button" aria-label="Edit" ng-click="editContact(currentContact)">
+							<i md-menu-origin class="material-icons">edit</i>
+						</md-button>
+						<md-button class="md-icon-button" aria-label="Account" ng-click="$mdOpenMenu()">
+							<i md-menu-origin class="material-icons">account_circle</i>
+						</md-button>
+					</div>
+				</div>
+			</div>
+		</md-toolbar>
+	</md-content>
+
+	<div layout="row" layout-align="center center">
+		<md-content layout-padding class="autoScroll" flex-gt-md="70" flex>
+			<div layout="row" class="ca-primary" layout-align="end start">
+				<i class="material-icons md-primary">{{currentContact.isFav?"star":"star_border"}}</i>
+			</div>
+			<div layout="row" layout-padding layout-align="center start">
+				<div flex="30">
+					<img ng-src="{{currentContact.avatar}}" alt="{{currentContact.fname}} {{currentContact.lname}}" class="avatar" />
+				</div>
+			</div>
+			<div layout="row" layout-padding layout-align="space-apart start">
+				<i class="material-icons account-icons" flex-gt-sm="30">account_box</i>
+				<div layout="column" layout-align="start start" flex>
+					<p class="ca-contact-details"><span>First Name</span>{{currentContact.fname}}</p>
+					<p class="ca-contact-details"><span>Last Name</span>{{currentContact.lname}}</p>
+				</div>
+			</div>
+			<div layout="row" layout-padding layout-align="center start">
+				<i class="material-icons account-icons" flex-gt-sm="30">contact_phone</i>
+				<div layout="column" layout-align="start start" flex>
+					<p class="ca-contact-details"><span>Primary Phone</span>{{currentContact.phone1}}</p>
+					<p class="ca-contact-details"><span>Secondary Phone</span>{{currentContact.phone2}}</p>
+				</div>
+			</div>
+			<div layout="row" layout-padding layout-align="center start">
+				<i class="material-icons account-icons" flex-gt-sm="30">email</i>
+				<div layout="column" layout-align="start start" flex>
+					<p class="ca-contact-details "><span>Email</span>{{currentContact.email}}</p>
+				</div>
+			</div>
+			<div layout="row" layout-padding layout-align="center start">
+				<i class="material-icons account-icons" flex-gt-sm="30">cake</i>
+				<div layout="column" layout-align="start start" flex>
+					<p class="ca-contact-details "><span>Birthday</span>{{currentContact.bday | date:"MM/dd/yyyy"}}</p>
+				</div>
+			</div>
+			<div layout="row" layout-padding layout-align="center start">
+				<i class="material-icons account-icons" flex-gt-sm="30">web</i>
+				<div layout="column" layout-align="start start" flex>
+					<p class="ca-contact-details"><span>Website</span>{{currentContact.website}}</p>
+				</div>
+			</div>
+			<div layout="row" layout-padding layout-align="center center">
+				<md-button class="md-raised md-primary md-hue-2" ng-click="goBack()" flex="30">Back</md-button>
+				<md-button class="md-raised md-warn md-hue-1" ng-click="editContact(currentContact)" flex="30">Edit Contact</md-button>
+			</div>
+		</md-content>
+	</div>
+</div>

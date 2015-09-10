@@ -1,0 +1,79 @@
+[
+	{
+		"fname": "Petyr",
+		"lname": "Baelish",
+		"phone1": 1234567890,
+		"phone2": 1231231234,
+		"email": "littlefinger@kingslanding.com",
+		"bday": "1987-01-01T05:00:00.000Z",
+		"website": "material.angularjs.org",
+		"avatar": "images/male.png",
+		"isFav": true
+	},
+	{
+		"fname": "Stannis",
+		"lname": "Barathion",
+		"phone1": 1111111111,
+		"phone2": 1231231234,
+		"email": "ironthrone@barathion.com",
+		"bday": "1987-01-01T05:00:00.000Z",
+		"website": "material.angularjs.org",
+		"avatar": "images/female.png",
+		"isFav": true
+	},
+	{
+		"fname": "Jon",
+		"lname": "Snow",
+		"phone1": 1231231230,
+		"phone2": "",
+		"email": "imalive@castleblack.com",
+		"bday": "1987-01-01T05:00:00.000Z",
+		"website": "material.angularjs.org",
+		"avatar": "images/male.png",
+		"isFav": false
+	},
+	{
+		"fname": "Cersei",
+		"lname": "Lannister",
+		"phone1": 1111111111,
+		"phone2": 1231231234,
+		"email": "iamcersei@lannister.com",
+		"bday": "1987-01-01T05:00:00.000Z",
+		"website": "material.angularjs.org",
+		"avatar": "images/female.png",
+		"isFav": true
+	},
+	{
+		"fname": "Tyrion",
+		"lname": "Lannister",
+		"phone1": 1233214321,
+		"phone2": "",
+		"email": "ipaymydebts@lannister.com",
+		"bday": "1987-01-01T05:00:00.000Z",
+		"website": "material.angularjs.org",
+		"avatar": "images/male.png",
+		"isFav": false
+	},
+	{
+		"fname": "Arya",
+		"lname": "Stark",
+		"phone1": 2222222222,
+		"phone2": 1111111111,
+		"email": "ihatelannisters@winterfell.com",
+		"bday": "1987-01-01T05:00:00.000Z",
+		"website": "material.angularjs.org",
+		"avatar": "images/male.png",
+		"isFav": true
+	},
+	{
+		"fname": "Daenerys",
+		"lname": "Targaryen",
+		"phone1": 123555111,
+		"phone2": 9999999999,
+		"email": "motherofdragons@targaryen.com",
+		"bday": "1987-01-01T05:00:00.000Z",
+		"website": "material.angularjs.org",
+		"avatar": "images/female.png",
+		"isFav": true
+	}
+]

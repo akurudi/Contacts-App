@@ -1,0 +1,72 @@
+<div layout="column">
+	<md-content>
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<div layout="column" flex>
+					<div layout="row" layout-align="center center">
+						<h3 flex>CONTACTS APP</h3>
+						<md-button class="md-icon-button" ng-click="openBottomSheet()" aria-label="More">
+							<md-tooltip md-direction="left">
+								search
+							</md-tooltip>
+							<i class="material-icons">search</i>
+						</md-button>
+						<md-button class="md-icon-button" aria-label="Account" ng-click="$mdOpenMenu()">
+							<i md-menu-origin class="material-icons">account_circle</i>
+						</md-button>
+					</div>
+				</div>
+			</div>
+		</md-toolbar>
+	</md-content>
+	<div layout="row" layout-align="center">
+		<div flex="100" flex-gt-md="80" id="tabs">
+			<md-content class="md-padding">
+				<md-tabs md-stretch-tabs="always" md-dynamic-height md-border-bottom md-selected="selectedTabIndex">
+					<md-tab label="Favorites">
+						<md-content class="md-padding">
+							<h3 class="md-headline">Favorites</h3>
+							<div layout="row" layout-align="space-around center" layout-align-gt-md="start center" layout-wrap>
+								<md-button ng-click="viewContact(contact)" target="_blank" flex-gt-md="25" flex-sm="40" ng-repeat="contact in contacts | filter:{'isFav':true}">
+									<div layout="column" class="ca-favcontact-list" layout-align="center center">
+										<img ng-src="{{contact.avatar}}" alt="{{contact.fname}} {{contact.lname}}" flex="50" />
+										<div flex="50" class="ca-favcontact-text" layout="column" layout-align="center center">
+											<h3>{{contact.fname | capitalize}} {{contact.lname | capitalize}}</h3>
+											<p>{{contact.phone1}}</p>
+										</div>
+									</div>
+								</md-button>
+							</div>
+						</md-content>
+					</md-tab>
+					<md-tab label="All Contacts">
+						<md-content class="md-padding">
+							<h3 class="md-headline">All Contacts</h3>
+							<div offset-gt-sm="10">
+								<div class="md-list-item-text" ng-show="searchContactString" layout="row" layout-align="end center" layout-align-gt-md="center center">
+									<md-button md-no-ink class="md-accent md-hue-1 md-raised" ng-click="searchContactString = ''">Show All Contacts</md-button>
+								</div>
+								<md-list>
+									<md-list-item class="md-3-line" ng-click="viewContact(contact)" ng-repeat="contact in filteredContacts = (contacts | contactFilter:searchContactString | orderBy:'fname')">
+										<img ng-src="{{contact.avatar}}" alt="{{contact.fname}} {{contact.lname}}" class="ca-contactlist-img" />
+										<div class="md-list-item-text">
+											<h3>{{contact.fname | capitalize}} {{contact.lname | capitalize}}</h3>
+											<h4>Phone</h4>
+											<p>{{contact.phone1}}</p>
+										</div>
+									</md-list-item>
+								</md-list>
+								<div class="md-list-item-text" ng-show="filteredContacts.length === 0">
+									<p>No matches found</p>
+								</div>
+							</div>
+						</md-content>
+					</md-tab>
+				</md-tabs>
+			</md-content>
+		</div>
+	</div>
+</div>
+<md-button ng-click="addNewContact($event)" class="md-fab md-primary md-hue-2 ca-person-add-btn" aria-label="Add">
+	<i class="material-icons">person_add</i>
+</md-button>

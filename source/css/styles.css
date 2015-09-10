@@ -1,0 +1,64 @@
+div.ca-favcontact-list {
+      margin-top: 15px;
+    }
+    
+    div.ca-favcontact-list img {
+      max-width: 40%;
+    }
+    
+    div.ca-favcontact-text * {
+      margin: 0;
+    }
+    
+    img.ca-contactlist-img {
+      width: 80px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    
+    .md-menu-demo {
+      padding: 24px;
+    }
+    
+    .menu-demo-container {
+      min-height: 200px;
+    }
+    
+    .account-icons {
+      font-size: 55px;
+      color: #A6EAD9;
+      text-align: center;
+    }
+    
+    p.ca-contact-details span {
+      display: block;
+      opacity: .40;
+      font-size: 12px;
+      margin-left: 50px;
+      margin-bottom: 5px;
+      color: rgba(0, 0, 0, 0.54);
+    }
+    
+    p.ca-contact-details {
+      font-size: 18px;
+      margin: 0;
+      padding: 5px;
+    }
+    
+    .ca-person-add-btn {
+      top: auto;
+      right: 20px;
+      bottom: 20px;
+      left: auto;
+      position: fixed;
+    }
+    .ca-account-icons {
+      font-size: 55px;
+      color: #A6EAD9;
+    }
+    .ca-primary {
+      color: rgb(0,188,212);
+    }
+    .avatar {
+      max-width: 50%;
+    }
