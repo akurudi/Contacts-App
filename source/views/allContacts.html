@@ -29,8 +29,8 @@
 							<div layout="row" layout-align="space-around center" layout-align-gt-md="start center" layout-wrap>
 								<md-button ng-click="viewContact(contact)" target="_blank" flex-gt-md="25" flex-sm="40" ng-repeat="contact in contacts | filter:{'isFav':true}">
 									<div layout="column" class="ca-favcontact-list" layout-align="center center">
-										<img ng-src="{{contact.avatar}}" alt="{{contact.fname}} {{contact.lname}}" flex="50" />
-										<div flex="50" class="ca-favcontact-text" layout="column" layout-align="center center">
+										<img ng-src="{{contact.avatar}}" alt="{{contact.fname}} {{contact.lname}}" />
+										<div class="ca-favcontact-text" layout="column" layout-align="center center">
 											<h3>{{contact.fname | capitalize}} {{contact.lname | capitalize}}</h3>
 											<p>{{contact.phone1}}</p>
 										</div>

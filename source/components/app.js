@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngMaterial', 'ngRoute', 'ngMessages', 'appFilters']);
+var app = angular.module('app', ['ngMaterial', 'ngRoute', 'ngMessages', 'appFilters', 'LocalStorageModule']);
 app.config(function ($mdThemingProvider, $routeProvider) {
 	$mdThemingProvider.theme('default').primaryPalette('cyan').accentPalette('red');
 	$routeProvider.when("/", {

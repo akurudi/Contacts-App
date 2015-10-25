@@ -8,7 +8,7 @@ angular.module('app')
         var iconText = iconElem.text();
         iconElem.text(iconText === 'star_border' ? 'star' : 'star_border');
         scope.$apply(function () {
-          scope.currentContact.isFav = (iconText === 'star_border' ? true : false);
+          scope.tmpContact.isFav = (iconText === 'star_border' ? true : false);
         })
       })
     }
