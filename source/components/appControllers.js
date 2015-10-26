@@ -15,7 +15,6 @@ angular.module('app')
 		};
 		$scope.getContacts = function() {
 			if(localStorageService.get("contacts")) {
-				console.log("fetching from memory");
 				var data = angular.fromJson(angular.fromJson(localStorageService.get("contacts")));
 				for(var i=0; i < data.length; i++) {
 					data[i].bday = new Date(data[i].bday);
