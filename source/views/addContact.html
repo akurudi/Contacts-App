@@ -39,13 +39,13 @@
 					<div layout="row" layout-padding layout-align-sm="start start" layout-align-gt-sm="center start">
 						<i class="material-icons ca-account-icons">account_box</i>
 						<div layout="column" flex="70">
-							<md-input-container flex>
+							<md-input-container>
 								<input ng-model="currentContact.fname" name="fname" type="text" placeholder="First Name(required)" required>
 								<div ng-messages="userForm.fname.$error" ng-show="userForm.fname.$dirty">
 									<div ng-message="required">First Name is required.</div>
 								</div>
 							</md-input-container>
-							<md-input-container flex>
+							<md-input-container>
 								<input ng-model="currentContact.lname" name="lname" type="text" placeholder="Last Name (required)" required>
 								<div ng-messages="userForm.lname.$error" ng-show="userForm.lname.$dirty">
 									<div ng-message="required">Last Name is required.</div>
@@ -56,14 +56,14 @@
 					<div layout="row" layout-padding layout-align-sm="start start" layout-align-gt-sm="center start">
 						<i class="material-icons ca-account-icons">contact_phone</i>
 						<div layout="column" flex="70">
-							<md-input-container flex>
+							<md-input-container>
 								<!-- Use floating label instead of placeholder -->
 								<input ng-model="currentContact.phone1" name="phone1" type="number" placeholder="Primary Phone (required)" required>
 								<div ng-messages="userForm.phone1.$error" ng-show="userForm.phone1.$dirty">
 									<div ng-message="required">Primary Phone Number is required.</div>
 								</div>
 							</md-input-container>
-							<md-input-container class="md-icon-float" flex>
+							<md-input-container class="md-icon-float">
 								<!-- Use floating label instead of placeholder -->
 								<label>Secondary Phone</label>
 								<input ng-model="currentContact.phone2" name="phone2" type="number">
@@ -73,7 +73,7 @@
 					<div layout="row" layout-padding layout-align-sm="start start" layout-align-gt-sm="center start">
 						<i class="material-icons ca-account-icons">email</i>
 						<div layout="column" flex="70">
-							<md-input-container class="md-icon-float" flex>
+							<md-input-container class="md-icon-float">
 								<!-- Use floating label instead of placeholder -->
 								<label>Email</label>
 								<input ng-model="currentContact.email" name="email" type="email">
@@ -86,7 +86,7 @@
 					<div layout="row" layout-padding layout-align-sm="start start" layout-align-gt-sm="center start">
 						<i class="material-icons ca-account-icons">cake</i>
 						<div layout="column" flex="70">
-							<md-input-container class="md-icon-float" flex>
+							<md-input-container class="md-icon-float">
 								<!-- Use floating label instead of placeholder -->
 								<label>Birthday</label>
 								<input type="date" ng-model="currentContact.bday" name="birthday">
@@ -96,7 +96,7 @@
 					<div layout="row" layout-padding layout-align-sm="start start" layout-align-gt-sm="center start">
 						<i class="material-icons ca-account-icons">web</i>
 						<div layout="column" flex="70">
-							<md-input-container class="md-icon-float" flex>
+							<md-input-container class="md-icon-float">
 								<!-- Use floating label instead of placeholder -->
 								<label>Website</label>
 								<input ng-model="currentContact.website" name="website" type="text">
