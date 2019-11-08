@@ -1,10 +1,6 @@
 # Contacts App - AngularJS Material UI
 
-> Starter app using AngularJS Material.
-
-This is meant to be a starting point for your angularJS apps using material design. More importantly, it demonstrates how you can quickly put together UI components from the Angular Material project to generate an AngularJS app. I will eventually make this into a yo generator.
-
-For more information on usage of this framework, head on over to material.angularjs.com.
+This is an app that emulates Android's native contacts app. It is built using Material UI framework to align with Android's design philosophy. You can add, delete, edit and favorite contacts using this app.
 
 ######Disclaimer! 
 This project is still under development and has a few bugs.
