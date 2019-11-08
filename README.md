@@ -2,9 +2,6 @@
 
 This is an app that emulates Android's native contacts app. It is built using Material UI framework to align with Android's design philosophy. You can add, delete, edit and favorite contacts using this app.
 
-######Disclaimer! 
-This project is still under development and has a few bugs.
-
 ## Getting Started:
 
 CD into the root folder of this project.
