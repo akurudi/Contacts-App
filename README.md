@@ -1,4 +1,4 @@
-# AngularJS Material – Contacts App
+# Contacts App - AngularJS Material UI
 
 > Starter app using AngularJS Material.
 
